@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Calendare</title>
+    <meta
+      name="description"
+      content="Calendare is an online calendar and organizer where users can save events and get their work in order. Get your life organized!"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Resources/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="resources/images/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="resources/images/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="resources/images/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="resources/images/favicons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="resources/images/favicons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="resources/images/favicons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta
+      name="msapplication-config"
+      content="resources/images/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#167e56" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calendar">
+        <div class="month">
+          <i class="fas fa-angle-left prev"></i>
+          <div class="date">
+            <h1></h1>
+            <p></p>
+          </div>
+          <i class="fas fa-angle-right next"></i>
+        </div>
+        <div class="weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="days"></div>
+      </div>
+    </div>
+
+    <div class="new-event-modal">
+      <h2>New Event</h2>
+      <input class="event-input" placeholder="Event Title" />
+      <div class="buttons">
+        <button class="save">Save</button>
+        <button class="cancel">Cancel</button>
+      </div>
+    </div>
+
+    <div class="event-modal">
+      <h2>Event</h2>
+      <p class="event-text"></p>
+      <div class="buttons">
+        <button class="delete">Delete</button>
+        <button class="close">Close</button>
+      </div>
+    </div>
+
+    <div class="modal-backdrop"></div>
+
+    <script src="Resources/script.js"></script>
+  </body>
+</html>
