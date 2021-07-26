@@ -151,7 +151,7 @@ html {
 .new-event-modal {
   display: none;
   z-index: 20;
-  height: 40%;
+  height: 250px;
   width: 350px;
   position: absolute;
   top: 100px;
@@ -281,11 +281,11 @@ html {
 @media screen and (max-width: 480px) {
   .calendar {
     width: 90vw;
-    height: 70vh;
+    height: 450px;
   }
 
   .month {
-    height: 15vh;
+    height: 100px;
     padding: 1rem 2rem;
   }
 
@@ -311,7 +311,7 @@ html {
 
   .days div {
     width: calc(90vw / 7);
-    height: 8vh;
+    height: 50px;
     margin: 0;
     font-size: 1rem;
   }
@@ -319,7 +319,7 @@ html {
   .event-modal,
   .new-event-modal {
     width: 50vw;
-    height: 30vh;
+    height: 180px;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
