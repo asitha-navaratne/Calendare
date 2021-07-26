@@ -21,6 +21,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-x: auto;
 }
 
 .calendar {
@@ -160,44 +161,39 @@ html {
   border-radius: 10px;
 }
 
+.event-modal h2,
 .new-event-modal h2 {
   text-align: center;
   text-transform: uppercase;
+  color: #eee;
   text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
   font-size: 2.5rem;
   font-weight: 400;
-  color: #eee;
 }
 
 .event-modal h2 {
-  text-align: center;
-  text-transform: uppercase;
   border-bottom: 2px solid #eee;
-  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-  font-size: 2.5rem;
-  font-weight: 400;
-  color: #eee;
   padding-bottom: 10px;
 }
 
-.event-input {
+.event-input,
+.event-text {
   padding: 10px;
   width: 100%;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.event-input {
   margin: 20px 0 25px 0;
   border: 3px solid transparent;
   border-radius: 3px;
-  font-size: 1.5rem;
-  font-weight: 600;
   outline: none;
 }
 
 .event-text {
-  padding: 10px;
-  width: 100%;
   height: 40%;
   margin: 15px 0;
-  font-weight: 600;
-  font-size: 1.5rem;
   color: #eee;
   text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
   text-align: center;
@@ -216,25 +212,7 @@ html {
 }
 
 .cancel,
-.delete {
-  height: 40px;
-  width: 60px;
-  border: none;
-  border-radius: 5px;
-  margin: 5px 20px;
-  color: #333;
-  font-weight: bold;
-  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-  background-color: hsl(0, 29%, 65%);
-  transition: background-color 0.2s;
-}
-
-.cancel:hover,
-.delete:hover {
-  cursor: pointer;
-  background-color: hsl(0, 29%, 60%);
-}
-
+.delete,
 .save,
 .close {
   height: 40px;
@@ -245,13 +223,33 @@ html {
   color: #333;
   font-weight: bold;
   box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-  background-color: hsl(157, 29%, 65%);
   transition: background-color 0.2s;
+}
+
+.cancel:hover,
+.delete:hover,
+.save:hover,
+.close:hover {
+  cursor: pointer;
+}
+
+.cancel,
+.delete {
+  background-color: hsl(0, 29%, 65%);
+}
+
+.cancel:hover,
+.delete:hover {
+  background-color: hsl(0, 29%, 60%);
+}
+
+.save,
+.close {
+  background-color: hsl(157, 29%, 65%);
 }
 
 .save:hover,
 .close:hover {
-  cursor: pointer;
   background-color: hsl(158, 29%, 55%);
 }
 
@@ -278,4 +276,90 @@ html {
 ::-webkit-scrollbar-thumb {
   background: hsl(157, 80%, 15%);
   border-radius: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .calendar {
+    width: 90vw;
+    height: 70vh;
+  }
+
+  .month {
+    height: 15vh;
+    padding: 1rem 2rem;
+  }
+
+  .month h1 {
+    font-size: 2rem;
+  }
+
+  .month p {
+    font-size: 1rem;
+  }
+
+  .weekdays {
+    height: 3rem;
+  }
+
+  .weekdays div {
+    font-size: 1rem;
+  }
+
+  .days {
+    padding: 0;
+  }
+
+  .days div {
+    width: calc(90vw / 7);
+    height: 8vh;
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .event-modal,
+  .new-event-modal {
+    width: 50vw;
+    height: 30vh;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+  }
+
+  .event-modal h2,
+  .new-event-modal h2 {
+    font-size: 2rem;
+  }
+
+  .event-modal h2 {
+    padding-bottom: 5px;
+  }
+
+  .event-input,
+  .event-text {
+    padding: 5px;
+    font-size: 1.2rem;
+  }
+
+  .event-text {
+    height: 30%;
+  }
+
+  .delete,
+  .cancel,
+  .save,
+  .close {
+    height: 30px;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .delete,
+  .cancel,
+  .save,
+  .close {
+    height: 20px;
+    font-size: 0.8rem;
+  }
 }
