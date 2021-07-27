@@ -56,6 +56,11 @@ html {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.month h2 {
+  font-weight: 400;
   margin-bottom: 1rem;
 }
 

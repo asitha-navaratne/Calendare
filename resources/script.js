@@ -88,6 +88,8 @@ const renderCalendar = () => {
     "December",
   ];
 
+  document.querySelector(".date h2").innerHTML = date.getFullYear();
+
   document.querySelector(".date h1").innerHTML = months[date.getMonth()];
 
   document.querySelector(".date p").innerHTML = new Date().toDateString();
@@ -105,7 +107,8 @@ const renderCalendar = () => {
 
     if (
       i === new Date().getDate() &&
-      date.getMonth() === new Date().getMonth()
+      date.getMonth() === new Date().getMonth() &&
+      date.getFullYear() === new Date().getFullYear()
     ) {
       if (eventForDay) {
         days += `<div class="day today" id="${i}">${i}<span class="dot-today"></span></div>`;
